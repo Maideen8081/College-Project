@@ -1,0 +1,83 @@
+{% load static %}
+
+<header class="section-header">
+    <nav class="navbar navbar-expand-sm navbar-light border-bottom">
+      <div class="container">
+        <a href="#" class="brand-wrap">
+          <img class="logo" src=" {% static "images/logo.png" %}" style="width: 150px;">
+        </a>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item ml-2">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+         
+          
+           <div class="col-lg-3 col-sm-5 col-8 order-2 order-lg-3">
+            <div class="d-flex justify-content-end mb-3 mb-lg-0">
+              <div class="widget-header">
+                <small class="title text-muted">Welcome guest!</small>
+                <div id="cart">
+                  <a href="#" class="text-dark">Sign in</a>
+                  <span class="dark-transp"> | </span>
+                  <a href="#" class="text-dark">Register</a>
+                </div>
+              </div> 
+            </div> 
+          </div>
+          
+        </div> 
+      </div> 
+    </nav>
+    
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-6 col">
+          <form action="#" class="search">
+            <div class="input-group">
+              <input type="text" class="form-control" style="width: 60%;" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-dark" type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+  
+
+      <div class="dropdown me-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          <i class="fa fa-bars"></i> Categories
+        </button>
+        <ul class="dropdown-menu">
+          {% for link in links %}
+          <li><a class="dropdown-item" href="#">{{ link.category_name }}</a></li>
+          {% endfor %}
+          
+        </ul>
+      </div>
+  
+      
+
+
+
+         <div class="cart-icon ml-3">
+          <a href="#" class="btn btn-outline-dark">
+            <i class="fa fa-shopping-cart"></i> Cart <span class="badge badge-danger">5</span>
+          </a>
+        </div>
+        
+        </div> 
+      </div>
+    </nav>
+  </header>
