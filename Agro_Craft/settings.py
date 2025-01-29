@@ -79,17 +79,37 @@ WSGI_APPLICATION = 'Agro_Craft.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.mysql', 
-         'NAME': 'ProjectDatabase',
-         'USER': 'root',
-         'PASSWORD':'#Thuvan9787',
-         'HOST': 'localhost',  
-         'PORT': '3306',
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.mysql', 
+#          'NAME': 'Django_Database',
+#          'USER': 'root',
+#          'PASSWORD':'#root1234',
+#          'HOST': 'localhost',  
+#          'PORT': '3306',
 
+# },    
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'django_db_lno9',  # Database name
+#         'USER': 'root',             # Database user
+#         'PASSWORD': 'jG68TpLWNcIy3Y5L31R8y07vapjIFYoT',  # Password
+#         'HOST': 'dpg-cu8isp5ds78s73a8kj00-a.singapore-postgres.render.com',  # Host
+#         'PORT': '5432',  # Default PostgreSQL port
+#     }
+# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'my_database',  # Database name
+        'USER': 'postgres',             # Database user
+        'PASSWORD': 'root',  # Password
+        'HOST': 'localhost',  # Host
+        'PORT': '5432',  # Default PostgreSQL port
+    }
 }
-}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
